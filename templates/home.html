@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+<style>
+    *{
+    font-family:arial;
+    color:#fff;
+    }
+    body{
+    background-color:#030e19;
+    text-align:center
+    }
+</style>
+<h3>
+c_min:{{context.c_min}}
+    <br>
+c_max:{{context.c_max}}
+    <br>
+c_current:{{context.c_current}}
+    <br>
+status:{{context.status}}
+    <br>
+wind:{{context.wind}}
+    <br>
+c_feel:{{context.c_feel}} <!-- загуглити як на основі погодних даних виводити :як відчувається-->
+    <br>
+imovirnist_opadiv:{{context.opadi}}
+</h3>
+
+</body>
+</html>

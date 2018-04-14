@@ -28,6 +28,12 @@ def home():
     context['c_feel'] ='загуглити як на основі погодних даних виводити :як відчувається'
     precipitation_list =[21,23,53,64,75,63,72,81,91,10]
     context['precipitation'] = round(average(precipitation_list))
+    humidity= [40,50,45,34,34,23,54,54,33]
+    context['humidity']=round(average(humidity))
+    print(round(average(humidity)))
+    division = 1 / 8
+    dew_point=((round(average(humidity))/100)**division * (112+0.9*round(average(c_current_list)))+0.1*round(average(c_current_list))-112)
+    print(dew_point)
     return render_template('home.html',context=context)
 if __name__ == '__main__':
     app.run(debug=True, port=7778)
